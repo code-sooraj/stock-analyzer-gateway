@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    config:
+      name: stock-analyzer-gateway
+      uri: ${SA_CONFIG_SERVER_URI:http://localhost:8888}
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+#      routes:
+#      - id: stock_analyzer_main
+#        uri: http://localhost:9091
+#        predicates:
+#        - Path=/stocks/analysis/**

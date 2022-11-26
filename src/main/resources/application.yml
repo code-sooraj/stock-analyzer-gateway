@@ -1,0 +1,11 @@
+server:
+  port: ${SA_GATEWAY_PORT:9090} # Indicate the default PORT where this service will be started
+spring:
+  application:
+    name: stock-analyzer-gateway
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: ${SA_DISCOVERY_URI:http://localhost:8761/eureka}
